@@ -2,13 +2,12 @@ package slr.oneshot;
 
 /**
  *
- * @author Carlos Varela
+ * @author Carlos Chavarría
  */
 public class DSY {
 
     double[] dataY;
 
-    // Constructor for data set Y  obtained from https://www.displayr.com/what-is-linear-regression/
 
     public DSY(double[] _dataY) {
         this.dataY = _dataY;

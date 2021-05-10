@@ -7,7 +7,7 @@ package slr.oneshot;
 
 /**
  *
- * @author Carlos Varela
+ * @author Carlos Chavarría
  */
 
 import jade.core.Agent; 
@@ -26,17 +26,18 @@ public class SLROneShot extends Agent{
         
           private static final long serialVersionUID = 1L;
           
-          public void action (){
-              
-        // data set obtained from: https://www.displayr.com/what-is-linear-regression/
-        double[] benettonx = {23, 26, 30, 34, 43, 48, 52, 57, 58}; // X: independent variable 
-        double[] benettony = {651, 762, 856, 1063, 1190, 1298, 1421, 1440, 1518}; //Y: dependent variable 
-        
-        DS dsx = new DS(benettonx);
-        DSY dsy = new DSY(benettony);
-        Procedure slr = new Procedure(dsx, dsy);
-        slr.Prediction();
-        }    
+            public void action (){
+                    
+                // X: independent variables
+                double[] independents = {23, 26, 30, 34, 43, 48, 52, 57, 58}; 
+                //Y: dependent variables
+                double[] dependents = {651, 762, 856, 1063, 1190, 1298, 1421, 1440, 1518}; 
+                
+                DS dsx = new DS(independents);
+                DSY dsy = new DSY(dependents);
+                Procedure slr = new Procedure(dsx, dsy);
+                slr.Prediction();
+            }    
           
         public int onEnd(){
             myAgent.doDelete();

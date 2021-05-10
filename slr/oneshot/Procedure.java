@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Carlos Varela
+ * @author Carlos Chavarría
  */
 public class Procedure {
 //Atributes
